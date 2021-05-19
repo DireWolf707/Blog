@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class = 'container my-4'>
 <form method="post">
 {% csrf_token %}
-{{post.title}}
-<input type="submit" value="Confirm">
+<h3>Are You Sure You Want To Delete {{post.title}} ? </h3>
+<div class='mt-3'>
+<button type="submit" class="btn btn-danger">Confirm</button>
+</div>
 </form>
+</div>
 {% endblock content %}
