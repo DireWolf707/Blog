@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{post.title}} - {{post.body}}
+<a href="{% url 'post_edit' post.pk %}">Edit</a>
+<a href="{% url 'post_delete' post.pk %}">Delete</a>
+{% endblock content %}
