@@ -10,6 +10,9 @@
     <a href="{% url 'post_detail' post.pk %}" class="btn btn-primary">Check Out!</a>
   </div>
 </div>
+
+{% empty %}
+<h3>No Posts...</h3>
 {% endfor %}
 </div>
 
