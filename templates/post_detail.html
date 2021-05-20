@@ -1,12 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class='mx-5'>
 <div class="container-fluid py-5">
     <h1 class="display-5 fw-bold">{{post.title}}</h1>
     &nbsp-By {{post.author}}
     <hr>
     <p class="fs-4 text-break">{{post.body}}</p>
+    {% if user == post.author %}
     <a class="btn btn-warning btn-lg" href="{% url 'post_edit' post.pk %}" role="button">Edit</a>
     <a class="btn btn-danger btn-lg" href="{% url 'post_delete' post.pk %}" role="button">Delete</a>
+    {% endif %}
+</div>
 </div>
 {% endblock content %}
